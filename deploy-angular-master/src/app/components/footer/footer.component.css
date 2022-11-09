@@ -1,0 +1,22 @@
+
+.backFooter{
+    background-color: var(--color-morado);
+}
+.copyright-text{
+    color: var(--color-gris);
+    font-size: var(--sizeletra);
+    margin-bottom: 0;
+}
+.textDecorationNoneColor1{
+    text-decoration: none !important;
+    color: var(--color-gris);
+}
+.textDecorationNoneColor1:hover {
+    color: var(--color-azul);
+}
+.logoFooter{
+    border-radius: 100px;
+}
+.logoBIT{
+    color: #ffffff;
+}

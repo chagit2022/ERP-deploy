@@ -1,0 +1,29 @@
+
+.paddingForm{
+    padding: 20px 150px;
+}
+.bgRegistroDash{
+    background-image: linear-gradient(90deg, #6390f7 10%, #6231a3 90%);
+}
+.bday{
+    box-sizing: border-box;
+    border: 0cm;
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 8px;
+}
+.sidebar-container{
+    background: var(--color-azul);
+    min-height: 90vh;
+    width: 200px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+    margin-bottom: 2rem;
+}

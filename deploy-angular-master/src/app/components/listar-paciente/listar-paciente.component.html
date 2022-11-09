@@ -1,0 +1,89 @@
+<section class="bg-primary bg-gradient bg-opacity-25">
+
+    <div class="pt-3 pb-5 px-3">
+        <div class="d-flex card  flex-row">
+            <div class=" sidebar-container px-2 py-1">
+                <div class="logo">
+                    <img src="assets/img/hospital.png" alt="" width="120" height="120">
+                </div>
+                <div class="menu d-flex flex-column align-items-center row pt-2 offset-1">
+                    <a routerLink="/dashboard"><i class="fa-solid fa-house col-2 me-1"></i>Inicio</a>
+                    <a routerLink="/listar-doctores"><i class="fa-solid fa-user-doctor col-2 me-1"></i>Doctores</a>
+                    <a routerLink="/listar-pacientes"><i class="fa-solid fa-hospital-user col-2 me-1"></i>Pacientes</a>
+                    <a routerLink="/"><i class="fa-solid fa-right-from-bracket col-2 me-1"></i>Salir</a>
+                </div>
+            </div>
+            <div>
+                <div class="w-100">
+                    <nav class="navbar bg-secondary bg-gradient bg-opacity-25">
+                        <div class="container-fluid">
+                            <a class="navbar-brand px-3">En linea <i class="fa-solid fa-circle text-success w-25"></i>
+                            </a>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="container-sm text-center">
+                    <div class="p-4 bg-light">
+                        <div class="p-4 bg-light">
+                            <div class="d-flex justify-content-between">
+                                <h3>Listar Paciente</h3>
+                                <button class="btn-crear text-white" type="submit" routerLink="/registrar-paciente">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Crear paciente</button>
+                            </div>
+                            <h4 class="text-left">Total de pacientes:{{listarPaciente.length}}</h4>
+                            <table *ngIf="listarPaciente.length > 0" class="table table-responsive table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Documento</th>
+                                        <th>Numero de documento</th>
+                                        <th>Telefono</th>
+                                        <th>Edad</th>
+                                        <th>Altura</th>
+                                        <th colspan="2">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let mipaciente of listarPaciente">
+                                        <td>{{mipaciente.nombre}}</td>
+                                        <td>{{mipaciente.apellido}}</td>
+                                        <td>{{mipaciente.documento}}</td>
+                                        <td>{{mipaciente.numDocumento}}</td>
+                                        <td>{{mipaciente.telefono}}</td>
+                                        <td>{{mipaciente.edad}}</td>
+                                        <td>{{mipaciente.altura}}</td>
+                                        
+                                        <td>
+                                            <button class="btn-actualizar text-white p-2" type="submit"
+                                                [routerLink]="['/editar-Paciente', mipaciente._id]"
+                                                routerLinkActive="router-link-active">
+                                                <i class="fa-solid fa-file-pen"></i>
+                                                Actualizar</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-danger" type="submit"
+                                                (click)="eliminarPaciente(mipaciente._id)">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Borrar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h3 class="" *ngIf="listarPaciente.length ==0">No hay pacientes registrados</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<app-footer></app-footer>

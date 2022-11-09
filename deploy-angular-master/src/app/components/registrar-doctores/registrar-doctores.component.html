@@ -1,0 +1,140 @@
+<section class="bg-primary bg-gradient bg-opacity-25">
+
+    <div class="pt-3 pb-5 px-3">
+        <div class="d-flex card flex-row">
+            <div class=" sidebar-container px-2 py-1">
+                <div class="logo">
+                    <img src="assets/img/hospital.png" alt="" width="120" height="120">
+                </div>
+                <div class="menu d-flex flex-column align-items-center row pt-2 offset-1">
+                    <a routerLink="/dashboard"><i class="fa-solid fa-house col-2 me-1"></i>Inicio</a>
+                    <a routerLink="/listar-doctores"><i class="fa-solid fa-user-doctor col-2 me-1"></i>Doctores</a>
+                    <a routerLink="/listar-pacientes"><i class="fa-solid fa-hospital-user col-2 me-1"></i>Pacientes</a>
+                    <a routerLink="/"><i class="fa-solid fa-right-from-bracket col-2 me-1"></i>Salir</a>
+                </div>
+            </div>
+            <div>
+                <div class="w-100">
+                    <nav class="navbar bg-secondary bg-gradient bg-opacity-25">
+                        <div class="container-fluid">
+                            <a class="navbar-brand px-3">En linea <i class="fa-solid fa-circle text-success w-25"></i>
+                            </a>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <form [formGroup]="doctoresForm" (ngSubmit)="agregarDoctores()" class="row m-3 formDoctores d-flex justify-content-center card-body" action="">
+                    <div class="col-9 col-sm-19 col-md-7 col-lg-6 card border border-2 border-primary border-opacity-50 bg-light shadow-sm">
+                        <div class="row py-4">
+                            <h3 class="d-flex justify-content-center">{{titulo_form}}</h3>
+                            <div class="row col-12 mb-2">
+                                <div class="col-12 col-lg-6">
+                                    <label for="input1" class="form-label">Nombre</label>
+                                    <input formControlName="nombre" type="text" class="form-control border border-2 border-primary border-opacity-50" placeholder="Nombre"
+                                        aria-label="First name">
+                                    <span class="text-danger fw-bold"
+                                        *ngIf="doctoresForm.get('nombre')?.hasError('required') && doctoresForm.get('nombre')?.touched">Espacio
+                                        obligatorio</span>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <label for="input2" class="form-label">Apellido</label>
+                                    <input formControlName="apellido" type="text" class="form-control border border-2 border-primary border-opacity-50" placeholder="Apellido"
+                                        aria-label="Last name">
+                                    <span class="text-danger fw-bold"
+                                        *ngIf="doctoresForm.get('apellido')?.hasError('required') && doctoresForm.get('apellido')?.touched">Espacio
+                                        obligatorio</span>
+                                </div>
+                            </div>
+                            <div class="row col-lg-12 mb-2">
+                                <div class="col-6">
+                                    <label for="inputState" class="form-label">Tipo de identificacion</label>
+                                    <select formControlName="tipoIdentificacion" class="form-select border border-2 border-primary border-opacity-50">
+                                        <option selected>Elija una...</option>
+                                        <option value="cedula">Cedula</option>
+                                        <option value="contraseña">Contraseña</option>
+                                        <option value="cedulaExtrajera">Cedula de extrajeria</option>
+                                    </select>
+                                    <span class="text-danger fw-bold"
+                                    *ngIf="doctoresForm.get('tipoIdentificacion')?.hasError('required') && doctoresForm.get('tipoIdentificacion')?.touched">Espacio
+                                    obligatorio</span>
+                                </div>
+                                <div class="col-6">
+                                    <label for="input4" class="form-label">Numero de identificacion</label>
+                                    <input formControlName="numeroIdentificacion" type="number" class="form-control border border-2 border-primary border-opacity-50" 
+                                    placeholder="Numero de indetificacion" aria-label="Last name">
+                                    <span class="text-danger fw-bold"
+                                    *ngIf="doctoresForm.get('numeroIdentificacion')?.hasError('required') && doctoresForm.get('numeroIdentificacion')?.touched">Espacio
+                                    obligatorio</span>
+                                </div>
+                            </div>
+                            <div class="row col-12 mb-2">
+                                <div class="col-6 col-sm-5 col-lg-4">
+                                    <label for="bday">Fecha de nacimiento:</label>
+                                    <input formControlName="fecha" class="bday border border-2 border-primary border-opacity-50" type="date" id="bday" name="bday" />
+                                    <span class="text-danger fw-bold"
+                                    *ngIf="doctoresForm.get('fecha')?.hasError('required') && doctoresForm.get('fecha')?.touched">Espacio
+                                    obligatorio</span>             
+                                </div>
+                                <div class="col-12 col-sm-7 col-lg-8">
+                                    <label for="input6" class="form-label">Email</label>
+                                    <input formControlName="correo" type="email" class="form-control border border-2 border-primary border-opacity-50" placeholder="Correo"
+                                    aria-label="First name">
+                                    <span class="text-danger fw-bold"
+                                        *ngIf="doctoresForm.get('correo')?.hasError('required') && doctoresForm.get('correo')?.touched">Espacio
+                                        obligatorio</span>
+                                    </div>
+                                </div>
+                            <div class="row col-lg-12 mb-2">
+                                <div class="col-lg-6 col-6">
+                                    <label for="inputState" class="form-label">Área de trabajo</label>
+                                    <select formControlName="area" class="form-select border border-2 border-primary border-opacity-50" aria-placeholder="">
+                                        <option selected>Elija una...</option>
+                                        <option value="ANESTESIOLOGIA">ANESTESIOLOGÍA</option>
+                                        <option value="CARDIOLOGIA">CARDIOLOGÍA</option>
+                                        <option value="CUIDADOS">CUIDADOS INTENSIVOS</option>
+                                        <option value="HEMATOLOGIA">HEMATOLOGÍA</option>
+                                        <option value="INTERNA">MEDICINA INTERNA</option>
+                                        <option value="PEDIATRIA">PEDIATRÍA</option>
+                                        <option value="REHABILITACION">REHABILITACIÓN</option>
+                                        <option value="CIRUGIA">CIRUGÍA GENERAL</option>
+                                        <option value="GINECOLOGIA">GINECOLOGÍA</option>
+                                        <option value="OFTALMOLOGIA">OFTALMOLOGÍA</option>
+                                        <option value="UROLOGIA">UROLOGÍA</option>
+                                    </select>
+                                    <span class="text-danger fw-bold"
+                                        *ngIf="doctoresForm.get('area')?.hasError('required') && doctoresForm.get('area')?.touched">Espacio
+                                        obligatorio</span>
+                                </div>
+                                <div class="col-lg-6 col-6">
+                                    <label for="input4" class="form-label">Telefono</label>
+                                    <input formControlName="telefono" type="number" class="form-control border border-2 border-primary border-opacity-50" placeholder="Telefono"
+                                        aria-label="Last name">
+                                    <span class="text-danger fw-bold"
+                                        *ngIf="doctoresForm.get('telefono')?.hasError('required') && doctoresForm.get('telefono')?.touched">Espacio
+                                        obligatorio</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center ps-5 ms-4">
+                                <div class="col-4 pt-3" style="width: 220px ;">
+                                    <button type="submit" class="btn btn-primary" [disabled]="doctoresForm.invalid">{{texto_btn}}</button>
+
+                                </div>
+                                <div class="col-4 pt-3" style="width: 220px ;">
+                                    <button class="btn btn-primary text-white " routerLink="/listar-doctores">Ver Doctores</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<app-footer></app-footer>

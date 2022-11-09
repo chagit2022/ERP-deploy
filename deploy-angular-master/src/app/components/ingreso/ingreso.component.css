@@ -1,0 +1,75 @@
+body{
+    background-size: cover;
+    background-attachment: fixed;
+}
+.titulologin{
+    color: var(--color-blanco);
+}
+.contenedorFormulario{
+    position: relative;
+    background-image: var(--color-fondo-formulario);
+    width: 100%;
+    max-width: 500px;
+    margin: 48px auto;
+    border-radius: 5px;
+}
+.contenedorFormulario h2{
+    line-height: 1;
+    text-align: left;
+}
+.btn-login{
+    font-size: var(--sizeletraboton);
+    letter-spacing: 3px;
+}
+
+.contenedorFormulario input[type="text"],
+.contenedorFormulario input[type="password"], .btn-login{
+    outline: none;
+    background: var(--color-fondo-input);
+    display: block;
+    width: 100%;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 2px;
+    transition: all .5s;
+}
+.contenedorFormulario input[type="submit"]{
+    background: var(--color-fondo-input);
+    color: #fff;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: all .5s;
+
+}
+.btn-login:hover{
+    background: var(--color-morado-inicio);
+}
+
+.contenedorFormulario .reset-contraseña{
+    background: var(--color-morado-inicio);
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.contenedorFormulario .reset-contraseña a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 16px;
+}
+.contenedorFormulario .reset-contraseña:hover{
+    background: var(--color-fondo-input);
+}
+.contenedorFormulario .formulario{
+    display: none;
+}
+::placeholder{
+    color: var(--color-blanco);
+}
+
+.contenedorFormulario .formulario:nth-child(2){
+    display: block;
+}

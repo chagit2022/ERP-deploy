@@ -1,0 +1,23 @@
+.btn-actualizar{
+    background: var(--color-azul);
+    border: none;
+    border-radius: 6px;
+}
+.btn-crear{
+    background: var(--color-morado-slider);
+}
+.sidebar-container{
+    background: var(--color-azul);
+    min-height: 90vh;
+    width: 200px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+    margin-bottom: 2rem;
+}

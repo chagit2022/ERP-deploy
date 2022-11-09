@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<section class="container mt-lg-5">
+    <div class="table-responsive-lg rounded-3">
+        <div class="text-center">
+            <h1 >Correos clientes</h1>
+        </div>
+        <H4>Total de mensaje : {{listarCorreos.length}}</H4>
+        <table *ngIf="listarCorreos.length > 0" class="table table-primary table-striped">
+            <thead class="col-12">
+                <tr class="text-center"  >
+                    <th class="col-3">Fecha</th>
+                    <th class="col-6">Mensaje de</th>
+                    <th class="col-3">Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let elementoCorreo of listarCorreos">
+                    <td class="ms-3" type="date" >{{elementoCorreo.dateCreation}}</td>
+                    <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">Datos del cliente {{elementoCorreo.nombres}} </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Nombre : {{elementoCorreo.nombres}} <br>Apellidos :{{elementoCorreo.apellidos}} <br>Correo electronico:{{elementoCorreo.correo}} <br>Telefono:{{elementoCorreo.telefono}} <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">Datos de la empresa</button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Nombre:{{elementoCorreo.nombreEmp}} <br>Sitio web:{{elementoCorreo.sitioEmp}} <br>Tipo:{{elementoCorreo.tipoEmp}} <br>Categoria:{{elementoCorreo.categoriaEmp}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Sobre el proyecto
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Lista de los productos deseados :{{elementoCorreo.listUser}} <br> Mensaje:{{elementoCorreo.mensajeBox}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="justify-content-center align-items-center">
+                        <button class="btn btn-danger" type="button" (click)="deleteContacto(elementoCorreo._id)"
+                            >Borrar mensaje</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3  *ngIf="listarCorreos.length == 0" class="text-danger fw-bold text-center">No hay mensajes</h3>
+    </div>
+
+</section>
+<app-footer></app-footer>

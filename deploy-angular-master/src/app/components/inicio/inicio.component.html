@@ -1,0 +1,130 @@
+<app-navbar></app-navbar>
+<section class="container-fluid section1" style="background-image: url(assets/img/imgsection1.jpg);">
+    <div class="p-5  mx-4">
+        <h1 class="text-white fs-1 fw-bold pb-3">BIENVENIDOS</h1>
+        <p class="text-white w-50 pb-4">Con nosotros puedes gestionar los recursos de tu empresa a través de
+            nuestros dashbord personalizados.</p>
+        <a href="#" type="button" class="btnsection1 text-white">GESTIONAR RECURSOS</a>
+    </div>
+</section>
+<section class="container-fluid">
+    <div class="p-5  mx-4 divServicio">
+        <h1 class="fw-bold pb-3">NUESTRO SERVICIO</h1>
+        <div class="row row-cols-2 g-2 g-lg-3">
+            <div class="col-xs-12 col-md-4">
+                <div class="p-3 d-flex">
+                    <i class="fa-solid fa-calendar-days fs-1 pe-4 iS2"></i>
+                    <div>
+                        <h3 class="titulo">Planificar</h3>
+                        <p class="parrafoS2">Definir cómo estimar, adquirir, gestionar y utilizar los recursos
+                            físicos y del personal de la empresa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="p-3 d-flex">
+                    <i class="fa-solid fa-diagram-project fs-1 pe-4 iS2"></i>
+                    <div>
+                        <h3 class="titulo">Estimación</h3>
+                        <p class="parrafoS2">Este proceso identificará qué recursos y en qué cantidades son
+                            necesarios para cada actividad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="p-3 d-flex">
+                    <i class="fa-solid fa-user-gear fs-1 pe-4 iS2"></i>
+                    <div>
+                        <h3 class="titulo">Control</h3>
+                        <p class="parrafoS2">Los recursos necesarios para la ejecución del proyecto deben estar
+                            disponibles en el momento, la cantidad y el lugar adecuados.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="p-3 d-flex">
+                    <i class="fa-brands fa-instalod fs-1 pe-4 iS2"></i>
+                    <div>
+                        <h3 class="titulo">Adquisición</h3>
+                        <p class="parrafoS2">Es el proceso de obtención de los miembros del equipo, las
+                            instalaciones y otros recursos necesarios para el proyecto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="p-3 d-flex">
+                    <i class="fa-solid fa-people-group fs-1 pe-4 iS2"></i>
+                    <div>
+                        <h3 class="titulo">Gestión</h3>
+                        <p class="parrafoS2">Mantener la motivación del equipo fomentando un entorno de
+                            colaboración. Supervisar al equipo y aportar cambios para optimizar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="p-3 d-flex">
+                    <i class="fa-solid fa-trowel-bricks fs-1 pe-4 iS2"></i>
+                    <div>
+                        <h3 class="titulo">Desarrollo</h3>
+                        <p class="parrafoS2">Evaluar si hay carencias de competencias en el equipo y trabajar para
+                            eliminarlas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+<section class="container-fluid">
+    <div></div>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            <div class="divSlider p-1 ">
+                <img src="assets/img/slider6.jpeg" class="imgSlider" alt="">
+                <div class="textoSlider p-4 w-75">
+                    <h5>Ventajas y remuneración</h5>
+                    <p>BENEFICIOS ECONÓMICOS</p>
+                </div>
+            </div>                        
+        </ng-template>  
+        <ng-template carouselSlide>
+            <div class="divSlider p-1 ">
+                <img src="assets/img/slider8.jpeg" class="imgSlider" alt="">
+                <div class="textoSlider p-4 w-75">
+                    <h5>E.R.P</h5>
+                    <p>PLANIFICACIÓN DE RECURSOS</p>
+                </div>
+            </div>            
+        </ng-template>  
+        <ng-template carouselSlide>
+            <div class="divSlider p-1 col-xs-12">
+                <img src="assets/img/slider3.jpg" class="imgSlider" alt="">
+                <div class="textoSlider p-4 w-75">
+                    <h5>Gestión de Ausencias</h5>
+                    <p>CONTROL RECURSO HUMANO</p>
+                </div>
+            </div>            
+        </ng-template>  
+        <ng-template carouselSlide>
+            <div class="divSlider p-1">
+                <img src="assets/img/slider5.jpeg" class="imgSlider" alt="">
+                <div class="textoSlider p-4 w-75">
+                    <h5>Automatización</h5>
+                    <p>FACILIDAD PARA TRABAJAR</p>
+                </div>
+            </div>            
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="divSlider p-1">
+                <img src="assets/img/slider1.jpg" class="imgSlider" alt="">
+                <div class="textoSlider p-4 w-75">
+                    <h5>Optimización</h5>
+                    <p>EQUIPO/HUMANO</p>
+                </div>
+            </div>
+            
+        </ng-template>  
+    </owl-carousel-o>
+</section>
+<app-footer></app-footer>

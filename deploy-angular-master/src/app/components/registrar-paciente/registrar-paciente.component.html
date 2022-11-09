@@ -1,0 +1,112 @@
+<section class="bg-primary bg-gradient bg-opacity-25">
+
+    <div class="pt-3 pb-5 px-3">
+        <div class="d-flex card flex-row">
+            <div class=" sidebar-container px-2 py-1">
+                <div class="logo">
+                    <img src="assets/img/hospital.png" alt="" width="120" height="120">
+                </div>
+                <div class="menu d-flex flex-column align-items-center row pt-2 offset-1">
+                    <a routerLink="/dashboard"><i class="fa-solid fa-house col-2 me-1"></i>Inicio</a>
+                    <a routerLink="/listar-doctores"><i class="fa-solid fa-user-doctor col-2 me-1"></i>Doctores</a>
+                    <a routerLink="/listar-pacientes"><i class="fa-solid fa-hospital-user col-2 me-1"></i>Pacientes</a>
+                    <a routerLink="/"><i class="fa-solid fa-right-from-bracket col-2 me-1"></i>Salir</a>
+                </div>
+            </div>
+            <div>
+                <div class="w-100">
+                    <nav class="navbar bg-secondary bg-gradient bg-opacity-25">
+                        <div class="container-fluid">
+                            <a class="navbar-brand px-3">En linea <i class="fa-solid fa-circle text-success w-25"></i>
+                            </a>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                
+                
+                <div class="container-fluid my-5"> 
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="card col-lg-8 border border-2 border-primary border-opacity-50">
+                                <form class="row m-3 needs-validation" novalidate [formGroup]="pacienteForm"(ngSubmit)="dataPaciente()">
+                                    <h3 class="text-center">{{titulo_formulario}}</h3>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom01" class="form-label">Nombres</label>
+                                        <input type="text" class="form-control border border-2 border-primary border-opacity-50" formControlName="nombre" value="Nombre"
+                                            required>
+                                        <span class="text-danger" *ngIf="pacienteForm.get('nombre')?.hasError('required') && pacienteForm.get('nombre')?.touched">Nombre obligatorio</span>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom02" class="form-label">Apellidos</label>
+                                        <input type="text" class="form-control border border-2 border-primary border-opacity-50" formControlName="apellido" value="Apellido"
+                                            required>
+                                        <span class="text-danger" *ngIf="pacienteForm.get('apellido')?.hasError('required') && pacienteForm.get('apellido')?.touched">Apellido obligatorio</span>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom04" class="form-label">Documento Identidad</label>
+                                        <select class="form-select border border-2 border-primary border-opacity-50" formControlName="documento" required>
+                                            <option selected disabled value="">Elegir una opcion</option>
+                                            <option>Cédula Ciudadania</option>
+                                            <option>Tarjeta de Identidad</option>
+                                            <option>Cedula Extranjería</option>
+                                        </select>
+                                        <span class="text-danger" *ngIf="pacienteForm.get('documento')?.hasError('required') && pacienteForm.get('documento')?.touched">Documento obligatorio</span>
+                                    </div>
+                                    <div class="col-md-4 mb-3 text-md-center">
+                                        <label for="validationCustom02" class="form-label">Número del documento</label>
+                                        <input type="text" class="form-control text-md-center border border-2 border-primary border-opacity-50" formControlName="numDocumento"
+                                            value="" minlength="6" maxlength="9" required>
+                                        <span class="text-danger" *ngIf="pacienteForm.get('numDocumento')?.hasError('required') && pacienteForm.get('numDocumento')?.touched">Número de documento obligatorio</span>
+                                    </div>
+                                    <div class="col-md-2 mb-3 text-md-center">
+                                        <label for="validationCustom02" class="form-label">Telefono</label>
+                                        <input type="text" class="form-control text-md-center border border-2 border-primary border-opacity-50" formControlName="telefono"
+                                            value="" minlength="10" maxlength="10" required>
+                                        <span class="text-danger" *ngIf="pacienteForm.get('telefono')?.hasError('required') && pacienteForm.get('telefono')?.touched">Telefono obligatorio</span>
+                                    </div>
+                                    <div class="col-md-2 mb-3 text-md-center">
+                                        <label for="validationCustom02" class="form-label">Edad</label>
+                                        <input type="text" class="form-control text-md-center border border-2 border-primary border-opacity-50" formControlName="edad"
+                                            value="" minlength="1" maxlength="3" required>
+                                        <span class="text-danger" *ngIf="pacienteForm.get('edad')?.hasError('required') && pacienteForm.get('edad')?.touched">Edad obligatoria</span>
+                                        <span class="text-danger" *ngIf="pacienteForm.get('edad')?.hasError('required') && pacienteForm.get('edad')?.touched">Edad incorrecta</span>
+                
+                                    </div>
+                                    <div class="col-md-2 mb-3">
+                                        <label for="validationCustom02" class="form-label">Altura (cm)</label>
+                                        <input type="text" class="form-control text-md-center border border-2 border-primary border-opacity-50" formControlName="altura"
+                                            value="" minlength="2" maxlength="3" required>
+                                        <span class="text-danger" *ngIf="pacienteForm.get('altura')?.hasError('required') && pacienteForm.get('altura')?.touched">Altura obligatoria</span>
+                                    </div>
+                                    <div class="d-flex justify-content-center ms-5">
+                                        <div class="col-4 pt-3 " style="width: 220px ;">
+                                            <button class="btn btn-primary p-2" type="submit" [disabled]="pacienteForm.invalid">{{texto_boton}} Paciente</button>
+                                        </div>
+                                        <div class="col-4 pt-3" style="width: 220px ;">
+                                            <button class="btn-actualizar text-white p-2" routerLink="/pacientes">Ver Paciente</button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                
+                
+                
+                
+                
+                
+                            </div>
+                        </div>
+                
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<app-footer></app-footer>

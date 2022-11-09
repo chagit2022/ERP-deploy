@@ -1,0 +1,19 @@
+.sidebar-container{
+    background: var(--color-azul);
+    min-height: 90vh;
+    width: 200px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+    margin-bottom: 2rem;
+}
+.sizelog{
+    width: 150px;
+    height: 150px;
+}

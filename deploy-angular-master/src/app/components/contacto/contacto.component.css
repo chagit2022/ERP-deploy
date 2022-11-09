@@ -1,0 +1,237 @@
+/* :root {
+    --cardWidth: 200px;
+    --cardHeight: 100px;
+    --cardMargin: 16px;
+} */
+
+/* Params block container 1 */
+.container1Params{
+    height: 200px;
+    padding-bottom: 50px;
+}
+
+.subtitle{
+    color: var(--color-numero-contacto);
+    font-size: var(--sizeletra);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 3px;
+
+}
+
+.H1C1Params, .H2C2Params{
+    font-weight: 500;
+
+}
+
+/* Params block container 2 */
+.container2Params{
+    background-color: var(--color-morado-contacto2);
+    background-image: url("https://cdn.bizneo.com/blog/wp-content/uploads/2022/02/ERP-RH.jpeg");
+}
+
+.H2C2Params{
+    color: var(--color-morado-contacto);
+}
+
+.discover{
+    line-height: 4rem;
+    color: var(--color-morado-contacto);
+    ;
+}
+
+.row-padding{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.card-process1{
+    margin-top: 100px;
+    background: var(--color-blanco);
+    border: var(--color-morado-contacto2) 1px solid;
+    border-radius: 8px;
+    font-weight: 100;
+    margin-right: 90px;
+
+}
+.align-card{
+    display: flex;
+}
+@media (max-width: 1000px){
+    .align-card{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center !important;
+        margin-inline-end: auto;
+        margin-bottom: 130px;
+    }
+}
+
+.numeroParams{
+    background: var(--color-azul-fondonumero-contacto);
+    border-radius: 60%;
+    border: var(--color-morado-contacto2) 1px solid;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height:6.2rem;
+    width: 72px;
+    height: 72px;
+    text-align:center;
+    margin-top: 10px;
+
+}
+
+.numParamsP{
+    margin-block: -18px;
+}
+
+.text-3D{
+    text-transform: uppercase;
+    --color:0, 0, 0;
+    letter-spacing: 10px;
+    color: var(--color-blanco);
+    text-shadow:
+    0 1px 0 #ccc,
+    0 2px 0 #acacac,
+    0 3px 0 #a0a0a0,
+    0 4px 0 #9b9a9a,
+    0 5px 0 #888787,
+    0 0 1px rgba(var(--color),.1),
+    0 0 2px rgba(var(--color),.1),
+    0 1px 3px rgba(var(--color),.3),
+    0 3px 4px rgba(var(--color),.3),
+    0 5px 5px rgba(var(--color),.25),
+    0 10px 6px rgba(var(--color),.2),
+    0 20px 20px rgba(var(--color),.15);
+
+
+
+
+    }
+
+    .numero-3D{
+        text-transform: uppercase;
+        --color:0, 0, 0;
+        color: #c8a8d6;
+        text-shadow:
+        0 1px 0 #e8c3f9,
+        0 2px 0 #c8a8d6,
+        0 3px 0 rgb(161, 135, 173),
+        0 4px 0 rgb(141, 119, 152),
+        0 5px 0 rgb(106, 89, 115),
+        0 0 1px rgba(var(--color),.1),
+        0 0 5px rgba(var(--color),.1),
+        0 1px 3px rgba(var(--color),.3),
+        0 3px 5px rgba(var(--color),.3),
+        0 5px 10px rgba(var(--color),.25),
+        0 10px 10px rgba(var(--color),.2),
+        0 20px 20px rgba(var(--color),.15);
+        }
+
+.card-process2{
+    background:white;
+    border: 1px solid #5010a4;
+    border-radius: 8px;
+    font-weight: 100;
+    margin: -80px 0px -50px 0;
+
+}
+
+/* container3 */
+.container3Params{
+    background-image: linear-gradient(90deg, #6390f7 10%, #6231a3 90%);
+    /* background-image: linear-gradient(90deg, --color-azul 0%, #7446af 90%); */
+    color: #fff;
+
+}
+
+.placeholder{
+    color: #c8a8d6;
+}
+
+.formParams{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: transparent;
+
+}
+.cardParams {
+width: 150px;
+height: 120px;
+margin: 14px;
+border: 1px solid #ccc;
+border-radius: 8px;
+background: #fff;
+box-sizing: border-box;
+}
+.checkParams{
+    position: absolute;
+    top: 10px;
+    left: 140px;
+}
+
+.text_card{
+    font-size: 0.8rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: -10px;
+    color: #5010a4;
+
+}
+
+
+.card-title0{
+margin-top: -6px;
+margin-bottom: -4px;
+}
+
+.card-title1, .card-title2, .card-title3, .card-title4, .card-title5{
+    margin-top: -12px;
+    }
+
+
+
+.spanParams{
+    color: #5010a4;
+}
+
+.spanParamsBox{
+    color: #5010a4;
+    font-size: 10px;
+    margin-inline: -15px;
+
+}
+
+.spanParamsBox2{
+    color: crimson;
+    font-size: 10px;
+    margin-inline: -15px;
+    padding-bottom: 8px;
+}
+
+.boxSizeEnvio{
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 16px;
+
+}
+
+.btnParams{
+    background-image: linear-gradient(90deg, #6390f7 10%, #6231a3 90%);
+    border: #fff 1px solid;
+    width: 15rem;
+    position: absolute;
+    right: 50px;
+    --color:0, 0, 0;
+    font-size: var(--sizeletraboton);
+    letter-spacing: 3px;
+    color: var(--color-blanco);
+    ;
+
+
+
+}
+
+
+
+
